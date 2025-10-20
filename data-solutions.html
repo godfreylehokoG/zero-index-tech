@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Solutions - Zero Index</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl">ZI</div>
+                        <span class="text-xl font-bold text-gray-800">Zero Index</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="index.html#services" class="text-blue-600 font-medium">Services</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="index.html#work" class="text-gray-600 hover:text-blue-600 transition">Our Work</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-16">
+        <div class="flex flex-col items-center space-y-6 py-8">
+            <a href="index.html" class="text-xl text-gray-800">Home</a>
+            <a href="index.html#services" class="text-xl text-gray-800">Services</a>
+            <a href="index.html#about" class="text-xl text-gray-800">About</a>
+            <a href="index.html#work" class="text-xl text-gray-800">Our Work</a>
+            <a href="contact.html" class="text-xl text-gray-800">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Data <span class="text-blue-300">Solutions</span></h1>
+                    <p class="text-xl mb-8">Transform raw data into actionable insights that drive business growth and operational efficiency.</p>
+                    <a href="contact.html" class="bg-white text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition">Get Started</a>
+                </div>
+                <div class="relative">
+                    <img src="http://static.photos/technology/1024x576/10" alt="Data analytics" class="rounded-xl shadow-2xl border-4 border-blue-400/30">
+                    <div class="absolute -bottom-6 -right-6 bg-blue-600 p-4 rounded-xl shadow-lg">
+                        <i data-feather="bar-chart-2" class="w-12 h-12 text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Data <span class="text-blue-600">Capabilities</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive solutions to harness the power of your business data</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Data Analytics -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="trending-up" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Analytics</h3>
+                    <p class="text-gray-600">Advanced analytics to uncover patterns, trends, and insights from your business data.</p>
+                </div>
+                
+                <!-- Business Intelligence -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="pie-chart" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Business Intelligence</h3>
+                    <p class="text-gray-600">Interactive dashboards and reports that transform complex data into understandable insights.</p>
+                </div>
+                
+                <!-- Data Warehousing -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="hard-drive" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Warehousing</h3>
+                    <p class="text-gray-600">Centralized, optimized data storage solutions for efficient analysis and reporting.</p>
+                </div>
+                
+                <!-- Predictive Modeling -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="activity" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Predictive Modeling</h3>
+                    <p class="text-gray-600">Machine learning models that forecast future trends and behaviors based on historical data.</p>
+                </div>
+                
+                <!-- Data Integration -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="layers" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Integration</h3>
+                    <p class="text-gray-600">Seamless connection of disparate data sources into a unified view for comprehensive analysis.</p>
+                </div>
+                
+                <!-- Custom Solutions -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="sliders" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Solutions</h3>
+                    <p class="text-gray-600">Tailored data solutions designed specifically for your unique business requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="http://static.photos/technology/1024x576/11" alt="Data visualization" class="rounded-xl shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">How Our Data <span class="text-blue-600">Solutions Help</span></h2>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-feather="check" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Informed Decision Making</h3>
+                                <p class="text-gray-600">Base your business decisions on concrete data rather than intuition or guesswork.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-feather="check" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Identify Opportunities</h3>
+                                <p class="text-gray-600">Discover hidden patterns and trends that reveal new business opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-feather="check" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Operational Efficiency</h3>
+                                <p class="text-gray-600">Streamline operations by identifying inefficiencies and bottlenecks in your processes.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-feather="check" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Competitive Advantage</h3>
+                                <p class="text-gray-600">Gain insights that give you an edge over competitors who aren't leveraging their data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Unleash the Power of Your Data?</h2>
+            <p class="text-xl mb-8">Contact us today to discuss how we can help transform your data into actionable business intelligence.</p>
+            <a href="contact.html" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl">ZI</div>
+                        <span class="text-xl font-bold">Zero Index</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Digital transformation solutions for modern businesses.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/zero-index-technologies" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="data-solutions.html" class="text-blue-400 font-medium">Data Solutions</a></li>
+                        <li><a href="cloud-solutions.html" class="text-gray-400 hover:text-white transition">Cloud Solutions</a></li>
+                        <li><a href="web-development.html" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="app-development.html" class="text-gray-400 hover:text-white transition">App Development</a></li>
+                        <li><a href="automation.html" class="text-gray-400 hover:text-white transition">Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html#work" class="text-gray-400 hover:text-white transition">Our Work</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i> info@zeroindex.co.za
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i> +27 123 456 789
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i> Johannesburg, South Africa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 Zero Index Technologies. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

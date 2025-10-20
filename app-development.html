@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Development - Zero Index</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl">ZI</div>
+                        <span class="text-xl font-bold text-gray-800">Zero Index</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="index.html#services" class="text-blue-600 font-medium">Services</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="index.html#work" class="text-gray-600 hover:text-blue-600 transition">Our Work</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-16">
+        <div class="flex flex-col items-center space-y-6 py-8">
+            <a href="index.html" class="text-xl text-gray-800">Home</a>
+            <a href="index.html#services" class="text-xl text-gray-800">Services</a>
+            <a href="index.html#about" class="text-xl text-gray-800">About</a>
+            <a href="index.html#work" class="text-xl text-gray-800">Our Work</a>
+            <a href="contact.html" class="text-xl text-gray-800">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">App <span class="text-blue-300">Development</span></h1>
+                    <p class="text-xl mb-8">Custom mobile applications for iOS and Android that deliver exceptional user experiences.</p>
+                    <a href="contact.html" class="bg-white text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition">Get Started</a>
+                </div>
+                <div class="relative">
+                    <img src="http://static.photos/technology/1024x576/15" alt="App development" class="rounded-xl shadow-2xl border-4 border-blue-400/30">
+                    <div class="absolute -bottom-6 -right-6 bg-blue-600 p-4 rounded-xl shadow-lg">
+                        <i data-feather="smartphone" class="w-12 h-12 text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our App <span class="text-blue-600">Development Services</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive mobile solutions to engage your audience and grow your business</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- iOS Development -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="apple" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">iOS Development</h3>
+                    <p class="text-gray-600">Beautiful, high-performance native applications for iPhone and iPad.</p>
+                </div>
+                
+                <!-- Android Development -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="smartphone" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Android Development</h3>
+                    <p class="text-gray-600">Custom Android apps optimized for a wide range of devices and screen sizes.</p>
+                </div>
+                
+                <!-- Cross-Platform -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="tablet" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cross-Platform</h3>
+                    <p class="text-gray-600">Single codebase apps that run on both iOS and Android with native performance.</p>
+                </div>
+                
+                <!-- UI/UX Design -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="pen-tool" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600">Intuitive interfaces and seamless user experiences designed for mobile.</p>
+                </div>
+                
+                <!-- App Maintenance -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="settings" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">App Maintenance</h3>
+                    <p class="text-gray-600">Ongoing support, updates, and improvements to keep your app running smoothly.</p>
+                </div>
+                
+                <!-- App Marketing -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="bar-chart-2" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">App Marketing</h3>
+                    <p class="text-gray-600">Strategies to increase downloads, engagement, and retention for your app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our App Development <span class="text-blue-600">Process</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A structured approach to delivering high-quality mobile applications</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="search" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Discovery</h3>
+                    <p class="text-gray-600">Understand your requirements and define project scope.</p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="h-full w-8 flex items-center justify-center">
+                        <i data-feather="arrow-right" class="w-6 h-6 text-gray-400 hidden md:block"></i>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="pen-tool" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Design</h3>
+                    <p class="text-gray-600">Create wireframes, prototypes, and UI/UX designs.</p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="h-full w-8 flex items-center justify-center">
+                        <i data-feather="arrow-right" class="w-6 h-6 text-gray-400 hidden md:block"></i>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="code" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Development</h3>
+                    <p class="text-gray-600">Build the app with clean, maintainable code.</p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="h-full w-8 flex items-center justify-center">
+                        <i data-feather="arrow-right" class="w-6 h-6 text-gray-400 hidden md:block"></i>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="check-circle" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Testing</h3>
+                    <p class="text-gray-600">Rigorous quality assurance across devices.</p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="h-full w-8 flex items-center justify-center">
+                        <i data-feather="arrow-right" class="w-6 h-6 text-gray-400 hidden md:block"></i>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="upload-cloud" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Deployment</h3>
+                    <p class="text-gray-600">Launch on app stores and monitor performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Have an App Idea?</h2>
+            <p class="text-xl mb-8">Let's turn your vision into a reality with a custom mobile application.</p>
+            <a href="contact.html" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl">ZI</div>
+                        <span class="text-xl font-bold">Zero Index</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Digital transformation solutions for modern businesses.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/zero-index-technologies" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="data-solutions.html" class="text-gray-400 hover:text-white transition">Data Solutions</a></li>
+                        <li><a href="cloud-solutions.html" class="text-gray-400 hover:text-white transition">Cloud Solutions</a></li>
+                        <li><a href="web-development.html" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="app-development.html" class="text-blue-400 font-medium">App Development</a></li>
+                        <li><a href="automation.html" class="text-gray-400 hover:text-white transition">Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html#work" class="text-gray-400 hover:text-white transition">Our Work</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i> info@zeroindex.co.za
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i> +27 123 456 789
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i> Johannesburg, South Africa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 Zero Index Technologies. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
