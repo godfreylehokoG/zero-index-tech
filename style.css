@@ -1,8 +1,21 @@
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
 body {
 	padding: 2rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
 }
-
 h1 {
 	font-size: 16px;
 	margin-top: 0;

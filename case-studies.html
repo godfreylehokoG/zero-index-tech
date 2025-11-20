@@ -1,0 +1,242 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - Zero Index</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+        }
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="/static/logo.png" alt="Zero Index Logo" class="w-10 h-10">
+                        <span class="text-xl font-bold text-gray-800">Zero Index</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+                    <a href="case-studies.html" class="text-blue-600 font-medium">Case Studies</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="index.html#work" class="text-gray-600 hover:text-blue-600 transition">Our Work</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-16">
+        <div class="flex flex-col items-center space-y-6 py-8">
+            <a href="index.html" class="text-xl text-gray-800">Home</a>
+            <a href="index.html#services" class="text-xl text-gray-800">Services</a>
+            <a href="case-studies.html" class="text-xl text-blue-600 font-medium">Case Studies</a>
+            <a href="index.html#about" class="text-xl text-gray-800">About</a>
+            <a href="index.html#work" class="text-xl text-gray-800">Our Work</a>
+            <a href="contact.html" class="text-xl text-gray-800">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Our <span class="text-blue-300">Success Stories</span></h1>
+                <p class="text-xl mb-8">Real-world examples of how we've helped businesses transform through technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Law Firm Case Study -->
+                <div class="case-study-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <img src="http://static.photos/legal/1024x576/1" alt="Law firm office" class="w-full h-64 object-cover">
+<div class="p-8">
+                        <h2 class="text-2xl font-bold mb-4">When Disaster Struck: How Cloud Migration Saved a Law Firm's Entire Practice</h2>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i data-feather="briefcase" class="w-4 h-4 mr-2"></i>
+                            <span>Legal Industry</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">The Challenge</h3>
+                        <p class="text-gray-600 mb-4">A law firm faced with years of accumulated physical documents taking up valuable office space, creating security concerns, and making file retrieval time-consuming.</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">Our Solution</h3>
+                        <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-2">
+                            <li>Full document digitization of thousands of files</li>
+                            <li>Secure cloud migration from local servers</li>
+                            <li>Process optimization for digital workflows</li>
+                            <li>Completed in just one month</li>
+                        </ul>
+                        
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">The Unexpected Test</h3>
+                        <p class="text-gray-600 mb-4">Weeks after migration, heavy rains caused the firm's roof to collapse, flooding their offices and destroying computer equipment and remaining paper files.</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">The Life-Saving Result</h3>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <p class="italic text-gray-700">"Our entire practice was saved because of the cloud migration. While we lost our physical office, we didn't lose a single client file. For a law firm, protecting our clients' cases is everything—it's more important than the office itself."</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">100%</p>
+                                <p class="text-sm text-gray-600">Files preserved</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">8000+</p>
+                                <p class="text-sm text-gray-600">Documents saved</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">4</p>
+                                <p class="text-sm text-gray-600">Years of records</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">0</p>
+                                <p class="text-sm text-gray-600">Cases disrupted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cannabis Case Study -->
+                <div class="case-study-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <img src="http://static.photos/retail/1024x576/1" alt="Cannabis store" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold mb-4">From Single Store to Industry Leader: How E-commerce Transformed a Cannabis Retailer</h2>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i data-feather="shopping-bag" class="w-4 h-4 mr-2"></i>
+                            <span>Cannabis Industry</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">The Challenge</h3>
+                        <p class="text-gray-600 mb-4">A single physical cannabis store limited by geographic constraints, operating hours, and lack of online presence in a rapidly digitalizing market.</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">Our Solution</h3>
+                        <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-2">
+                            <li>Compliant e-commerce platform development</li>
+                            <li>Targeted SEO optimization for cannabis searches</li>
+                            <li>Regulation-compliant digital marketing</li>
+                            <li>Online course delivery infrastructure</li>
+                        </ul>
+                        
+                        <h3 class="text-lg font-semibold mb-2 text-blue-600">The Transformation</h3>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <p class="italic text-gray-700">"Going online didn't just grow our business—it transformed it entirely. We went from serving our local community to becoming a recognized name across the country."</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">#1</p>
+                                <p class="text-sm text-gray-600">Search rankings</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">100%</p>
+                                <p class="text-sm text-gray-600">Growth</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">2</p>
+                                <p class="text-sm text-gray-600">Locations</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg text-center">
+                                <p class="text-2xl font-bold text-blue-600">New</p>
+                                <p class="text-sm text-gray-600">Revenue stream</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+            <p class="text-xl mb-8">Contact us today to discuss how we can help transform your business through technology.</p>
+            <a href="contact.html" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <img src="/static/logo.png" alt="Zero Index Logo" class="w-10 h-10">
+                        <span class="text-xl font-bold">Zero Index</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Digital transformation solutions for modern businesses.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/zero-index-technologies" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Zero-Index/61578479607067" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+</div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="data-solutions.html" class="text-gray-400 hover:text-white transition">Data Solutions</a></li>
+                        <li><a href="cloud-solutions.html" class="text-gray-400 hover:text-white transition">Cloud Solutions</a></li>
+                        <li><a href="web-development.html" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="app-development.html" class="text-gray-400 hover:text-white transition">App Development</a></li>
+                        <li><a href="automation.html" class="text-gray-400 hover:text-white transition">Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="index.html#work" class="text-gray-400 hover:text-white transition">Our Work</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i> info@zeroindex.co.za
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i> 073 779 4934
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i> 23 Loveday St, Howard House, Johannesburg
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 Zero Index Technologies. All rights reserved.</p>
+                <div
