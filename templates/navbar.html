@@ -1,0 +1,58 @@
+<nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+	<!-- ...existing code from original nav... -->
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between h-16">
+			<div class="flex items-center">
+				<a href="#" class="flex items-center space-x-2">
+					<img src="images/Zerologo2.png" alt="Zero Index Logo" class="w-10 h-10">
+					<span class="text-xl font-bold text-gray-800">Zero Index</span>
+				</a>
+			</div>
+			<div class="hidden md:flex items-center space-x-8">
+				<a href="#home" class="text-blue-600 font-medium">Home</a>
+				<div class="relative group">
+					<button class="text-gray-600 hover:text-blue-600 transition flex items-center">
+						Services <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
+					</button>
+					<div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48 z-50">
+						<a href="data-solutions.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Data Solutions</a>
+						<a href="cloud-solutions.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Cloud Solutions</a>
+						<a href="web-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Web Development</a>
+						<a href="app-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">App Development</a>
+						<a href="automation.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Automation</a>
+					</div>
+				</div>
+				<a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+				<a href="#work" class="text-gray-600 hover:text-blue-600 transition">Our Work</a>
+				<a href="careers.html" class="text-gray-600 hover:text-blue-600 transition">Careers</a>
+				<a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+			</div>
+			<div class="md:hidden flex items-center">
+				<button id="menu-toggle" class="text-gray-600">
+					<i data-feather="menu"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Mobile Menu (kept inside same partial) -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-16">
+	<div class="flex flex-col items-center space-y-6 py-8">
+		<a href="#home" class="text-xl text-gray-800">Home</a>
+		<div class="text-xl text-gray-800 px-4 py-2">
+			<div class="font-medium mb-2">Services</div>
+			<div class="ml-4 space-y-2">
+				<a href="data-solutions.html" class="block text-gray-700 hover:text-blue-600">Data Solutions</a>
+				<a href="cloud-solutions.html" class="block text-gray-700 hover:text-blue-600">Cloud Solutions</a>
+				<a href="web-development.html" class="block text-gray-700 hover:text-blue-600">Web Development</a>
+				<a href="app-development.html" class="block text-gray-700 hover:text-blue-600">App Development</a>
+				<a href="automation.html" class="block text-gray-700 hover:text-blue-600">Automation</a>
+			</div>
+		</div>
+		<a href="#about" class="text-xl text-gray-800">About</a>
+		<a href="#work" class="text-xl text-gray-800">Our Work</a>
+		<a href="careers.html" class="text-xl text-gray-800">Careers</a>
+		<a href="contact.html" class="text-xl text-gray-800">Contact</a>
+	</div>
+</div>

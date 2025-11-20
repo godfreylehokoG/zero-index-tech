@@ -26,66 +26,8 @@
     </style>
 </head>
 <body class="scroll-smooth font-sans antialiased text-gray-800">
-    <div id="vanta-globe" class="fixed inset-0 -z-10"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center space-x-2">
-                        <img src="/images/Zerologo2.png" alt="Zero Index Logo" class="w-10 h-10">
-<span class="text-xl font-bold text-gray-800">Zero Index</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-blue-600 font-medium">Home</a>
-                    <div class="relative group">
-                        <button class="text-gray-600 hover:text-blue-600 transition flex items-center">
-                            Services <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
-                        </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48 z-50">
-                            <a href="data-solutions.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Data Solutions</a>
-                            <a href="cloud-solutions.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Cloud Solutions</a>
-                            <a href="web-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Web Development</a>
-                            <a href="app-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">App Development</a>
-                            <a href="automation.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600">Automation</a>
-                        </div>
-                    </div>
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                    <a href="#work" class="text-gray-600 hover:text-blue-600 transition">Our Work</a>
-                    <a href="careers.html" class="text-gray-600 hover:text-blue-600 transition">Careers</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-</div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-toggle" class="text-gray-600">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-</div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-16">
-            <div class="flex flex-col items-center space-y-6 py-8">
-                <a href="#home" class="text-xl text-gray-800">Home</a>
-                <div class="text-xl text-gray-800 px-4 py-2">
-                    <div class="font-medium mb-2">Services</div>
-                    <div class="ml-4 space-y-2">
-                        <a href="data-solutions.html" class="block text-gray-700 hover:text-blue-600">Data Solutions</a>
-                        <a href="cloud-solutions.html" class="block text-gray-700 hover:text-blue-600">Cloud Solutions</a>
-                        <a href="web-development.html" class="block text-gray-700 hover:text-blue-600">Web Development</a>
-                        <a href="app-development.html" class="block text-gray-700 hover:text-blue-600">App Development</a>
-                        <a href="automation.html" class="block text-gray-700 hover:text-blue-600">Automation</a>
-                    </div>
-                </div>
-                <a href="#about" class="text-xl text-gray-800">About</a>
-                <a href="#work" class="text-xl text-gray-800">Our Work</a>
-                <a href="careers.html" class="text-xl text-gray-800">Careers</a>
-                <a href="contact.html" class="text-xl text-gray-800">Contact</a>
-</div>
-    </div>
+	<!-- navbar placeholder (replaces original nav + mobile menu) -->
+	<div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg text-white min-h-screen flex items-center pt-16">
@@ -309,115 +251,65 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <a href="#" class="flex items-center space-x-2 mb-6">
-                        <img src="images/Zerologo2.png" alt="Zero Index Logo" class="w-10 h-10">
-                        <span class="text-xl font-bold">Zero Index</span>
-                    </a>
-                    <p class="text-gray-400 mb-4">Digital transformation solutions for modern businesses.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i data-feather="twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i data-feather="facebook"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="data-solutions.html" class="text-gray-400 hover:text-white transition">Data Solutions</a></li>
-                        <li><a href="cloud-solutions.html" class="text-gray-400 hover:text-white transition">Cloud Solutions</a></li>
-                        <li><a href="web-development.html" class="text-gray-400 hover:text-white transition">Web Development</a></li>
-                        <li><a href="app-development.html" class="text-gray-400 hover:text-white transition">App Development</a></li>
-                        <li><a href="automation.html" class="text-gray-400 hover:text-white transition">Automation</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Company</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#work" class="text-gray-400 hover:text-white transition">Our Work</a></li>
-                        <li>
-                    <a href="careers.html" class="text-gray-400 hover:text-white transition">Careers</a>
-</li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Contact</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-400">
-                            <i data-feather="mail" class="w-4 h-4 mr-2"></i> info@zeroindex.co.za
-                        </li>
-                        <li class="flex items-center text-gray-400">
-                            <i data-feather="phone" class="w-4 h-4 mr-2"></i> 073 779 4934
-                        </li>
-                        <li class="flex items-center text-gray-400">
-                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i> 23 Loveday St, Howard House, Johannesburg
-</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400">© 2025 Zero Index Technologies. All rights reserved.</p>
-<div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- footer placeholder (replaces original footer) -->
+	<div id="footer-placeholder"></div>
 
-    <script>
-        // Initialize Vanta.js globe (guarded)
-        if (typeof VANTA !== 'undefined' && VANTA.GLOBE) {
-            VANTA.GLOBE({
-                el: "#vanta-globe",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x3b82f6,
-                backgroundColor: 0xf8fafc
-            });
-        }
+	<!-- template loader + initialization -->
+	<script>
+		// small helper to load partials
+		async function loadPartial(id, path) {
+			try {
+				const res = await fetch(path);
+				if (!res.ok) throw new Error(path + ' ' + res.status);
+				document.getElementById(id).innerHTML = await res.text();
+			} catch (e) {
+				console.warn('Could not load partial:', path, e);
+			}
+		}
 
-        // Mobile menu toggle (guard elements exist)
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
+		// initialize Vanta, menu behaviour and feather icons AFTER partials are loaded
+		function initPage() {
+			// Vanta.js globe (guarded)
+			if (typeof VANTA !== 'undefined' && VANTA.GLOBE) {
+				VANTA.GLOBE({
+					el: "#vanta-globe",
+					mouseControls: true,
+					touchControls: true,
+					gyroControls: false,
+					minHeight: 200.00,
+					minWidth: 200.00,
+					scale: 1.00,
+					scaleMobile: 1.00,
+					color: 0x3b82f6,
+					backgroundColor: 0xf8fafc
+				});
+			}
 
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
+			// Mobile menu toggle (elements come from injected navbar partial)
+			const menuToggle = document.getElementById('menu-toggle');
+			const mobileMenu = document.getElementById('mobile-menu');
+			if (menuToggle && mobileMenu) {
+				menuToggle.addEventListener('click', function() {
+					mobileMenu.classList.toggle('hidden');
+				});
+				mobileMenu.querySelectorAll('a').forEach(link => {
+					link.addEventListener('click', function() {
+						mobileMenu.classList.add('hidden');
+					});
+				});
+			}
 
-        // Feather icons (guarded)
-        if (typeof feather !== 'undefined') {
-            feather.replace();
-        }
-    </script>
+			// Feather icons
+			if (typeof feather !== 'undefined') {
+				feather.replace();
+			}
+		}
+
+		// load both partials then init
+		Promise.all([
+			loadPartial('navbar-placeholder', 'templates/navbar.html'),
+			loadPartial('footer-placeholder', 'templates/footer.html')
+		]).then(initPage);
+	</script>
 </body>
 </html>
