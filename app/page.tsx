@@ -46,7 +46,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Zero Index home"><img className="brand-mark" src="/zero-index-mark.png" alt="" /><span>ZERO INDEX</span></a>
-        <nav aria-label="Primary navigation"><a href="#problems">What we solve</a><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a></nav>
+        <nav aria-label="Primary navigation"><a href="#problems">What we solve</a><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a><a href="/pricing">Pricing</a></nav>
         <button className="nav-cta" type="button" onClick={openLeadForm}>Book a review <Arrow /></button>
       </header>
 
@@ -103,7 +103,7 @@ export default function Home() {
       <footer>
         <div className="footer-brand"><img className="footer-mark" src="/zero-index-mark-dark.png" alt="" /><strong>ZERO INDEX</strong><p>Operations, automation<br />and data systems.</p></div>
         <div><span className="footer-label">CONTACT</span><a href="mailto:hello@zeroindex.co.za">hello@zeroindex.co.za</a><span>Johannesburg, South Africa</span></div>
-        <div><span className="footer-label">NAVIGATE</span><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a></div>
+        <div><span className="footer-label">NAVIGATE</span><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a><a href="/pricing">Pricing</a></div>
         <div><span className="footer-label">LEGAL</span><a href="https://zeroindex.co.za/legal/privacy">Privacy</a><a href="https://zeroindex.co.za/legal/terms">Terms</a><span>© 2026 Zero Index</span></div>
       </footer>
 
