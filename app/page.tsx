@@ -1,3 +1,7 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 const pains = [
@@ -13,20 +17,45 @@ const solutions = [
 ];
 
 export default function Home() {
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
+
+  function openLeadForm() {
+    setIsLeadFormOpen(true);
+  }
+
+  function closeLeadForm() {
+    setIsLeadFormOpen(false);
+  }
+
+  function submitLeadForm(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const body = [
+      `Name: ${formData.get("name")}`,
+      `Company: ${formData.get("company")}`,
+      `Email: ${formData.get("email")}`,
+      `Phone: ${formData.get("phone")}`,
+      `Main operational challenge: ${formData.get("challenge")}`,
+    ].join("\n");
+
+    window.location.href = `mailto:hello@zeroindex.co.za?subject=${encodeURIComponent("Enquiry & Operations Review")}&body=${encodeURIComponent(body)}`;
+    closeLeadForm();
+  }
+
   return (
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Zero Index home"><img className="brand-mark" src="/zero-index-mark.png" alt="" /><span>ZERO INDEX</span></a>
         <nav aria-label="Primary navigation"><a href="#problems">What we solve</a><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a></nav>
-        <a className="nav-cta" href="#contact">Book a review <Arrow /></a>
+        <button className="nav-cta" type="button" onClick={openLeadForm}>Book a review <Arrow /></button>
       </header>
 
       <section className="hero" id="top">
         <div className="eyebrow"><span /> Operations & technology consultancy</div>
-        <h1>Turn more enquiries<br />into customers.</h1>
+        <h1>What&apos;s Your Data<br />Telling you?</h1>
         <div className="hero-bottom">
-          <p>Zero Index designs AI-assisted enquiry, booking and operational systems for growing service businesses. We connect conversations, workflows and data so your team can respond faster and grow with control.</p>
-          <div className="hero-actions"><a className="button button-dark" href="#contact">Book an operations review <Arrow /></a><a className="text-link" href="#approach">See how we work <span>↓</span></a></div>
+          <p>Book a free 30-minute Enquiry & Operations Review. We will examine how work moves through your business, identify the first measurable bottleneck and outline what should happen next.</p>
+          <div className="hero-actions"><button className="button button-dark" type="button" onClick={openLeadForm}>Book an operations review <Arrow /></button><a className="text-link" href="#approach">See how we work <span>↓</span></a></div>
         </div>
         <div className="hero-meta"><span>Johannesburg · South Africa</span><span>For established, high-enquiry service businesses</span></div>
       </section>
@@ -39,7 +68,7 @@ export default function Home() {
 
       <section className="flow-section">
         <div className="section-label light">ONE CONNECTED SYSTEM / 02</div>
-        <div className="flow-heading"><h2>From first enquiry<br />to management insight.</h2><p>We do not install isolated technology. We design the complete path from customer conversation to operational action—and make the result measurable.</p></div>
+        <div className="flow-heading"><h2>From first enquiry<br />to management insight.</h2><p>We do not install isolated technology. We design the complete path from customer conversation to operational action and make the result measurable.</p></div>
         <div className="flow-list">{["Capture every enquiry", "Qualify and route", "Book and follow up", "Trigger internal work", "Measure performance"].map((item, i) => <div className="flow-item" key={item}><span>0{i + 1}</span><strong>{item}</strong><b>→</b></div>)}</div>
       </section>
 
@@ -51,7 +80,7 @@ export default function Home() {
 
       <section className="fit-section">
         <div className="section-label">WHO WE HELP / 04</div>
-        <div className="fit-layout"><h2>Built for businesses where response time matters.</h2><div className="fit-copy"><p>We work best with established service businesses handling a meaningful volume of calls, messages, bookings or applications—without an internal automation and data engineering team.</p><div className="sector-list"><span>Clinics & practices</span><span>Recruitment agencies</span><span>Property services</span><span>Training providers</span><span>Automotive services</span></div></div></div>
+        <div className="fit-layout"><h2>Built for businesses where response time matters.</h2><div className="fit-copy"><p>We work best with established service businesses handling a meaningful volume of calls, messages, bookings or applications, without an internal automation and data engineering team.</p><div className="sector-list"><span>Clinics & practices</span><span>Recruitment agencies</span><span>Property services</span><span>Training providers</span><span>Automotive services</span></div></div></div>
       </section>
 
       <section className="results-section" id="results">
@@ -68,15 +97,36 @@ export default function Home() {
 
       <section className="contact-section" id="contact">
         <div className="contact-label">YOUR FIRST STEP</div><h2>Find out where your business is losing enquiries and staff time.</h2>
-        <div className="contact-bottom"><p>In a free 30-minute review, we will examine how your organisation handles enquiries, bookings and follow-ups—and identify the first process worth improving.</p><a className="button button-light" href="mailto:info@zeroindex.co.za?subject=Enquiry%20%26%20Operations%20Review&body=Hi%20Zero%20Index%2C%0A%0AI%27d%20like%20to%20book%20an%20Enquiry%20%26%20Operations%20Review.%0A%0ACompany%3A%20%0AMain%20operational%20challenge%3A%20">Request my free review <Arrow /></a></div>
+        <div className="contact-bottom"><p>In a free 30-minute review, we will examine how your organisation handles enquiries, bookings and follow-ups, then identify the first process worth improving.</p><button className="button button-light" type="button" onClick={openLeadForm}>Request my free review <Arrow /></button></div>
       </section>
 
       <footer>
         <div className="footer-brand"><img className="footer-mark" src="/zero-index-mark-dark.png" alt="" /><strong>ZERO INDEX</strong><p>Operations, automation<br />and data systems.</p></div>
-        <div><span className="footer-label">CONTACT</span><a href="mailto:info@zeroindex.co.za">info@zeroindex.co.za</a><span>Johannesburg, South Africa</span></div>
+        <div><span className="footer-label">CONTACT</span><a href="mailto:hello@zeroindex.co.za">hello@zeroindex.co.za</a><span>Johannesburg, South Africa</span></div>
         <div><span className="footer-label">NAVIGATE</span><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a></div>
         <div><span className="footer-label">LEGAL</span><a href="https://zeroindex.co.za/legal/privacy">Privacy</a><a href="https://zeroindex.co.za/legal/terms">Terms</a><span>© 2026 Zero Index</span></div>
       </footer>
+
+      {isLeadFormOpen && (
+        <div className="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-form-title">
+          <button className="lead-modal-backdrop" type="button" aria-label="Close lead form" onClick={closeLeadForm} />
+          <form className="lead-form" onSubmit={submitLeadForm}>
+            <div className="lead-form-header">
+              <span className="contact-label">BOOK A REVIEW</span>
+              <button className="lead-close" type="button" aria-label="Close lead form" onClick={closeLeadForm}>×</button>
+            </div>
+            <h2 id="lead-form-title">Tell us where operations are leaking time.</h2>
+            <div className="form-grid">
+              <label>Name<input name="name" type="text" autoComplete="name" required /></label>
+              <label>Company<input name="company" type="text" autoComplete="organization" required /></label>
+              <label>Email<input name="email" type="email" autoComplete="email" required /></label>
+              <label>Phone<input name="phone" type="tel" autoComplete="tel" /></label>
+            </div>
+            <label>Main operational challenge<textarea name="challenge" rows={5} required /></label>
+            <button className="button button-dark" type="submit">Send enquiry <Arrow /></button>
+          </form>
+        </div>
+      )}
     </main>
   );
 }
