@@ -11,12 +11,12 @@ const plans = [
     description: "A clear online presence for a business getting established.",
     features: [
       "50% upfront project deposit",
-      "Monthly development payments for the remaining balance",
+      "Remaining project balance paid on completion",
       "Domain registration and setup",
       "Professional email setup",
       "One-page website with Home, About and Contact",
       "Google Business Profile setup",
-      "Post-launch domain and maintenance plan",
+      "Post-launch maintenance at 10% per month, every month",
     ],
   },
   {
@@ -26,13 +26,13 @@ const plans = [
     featured: true,
     features: [
       "50% upfront project deposit",
-      "Monthly development payments for the remaining balance",
+      "Remaining project balance paid on completion",
       "Everything in Basic",
       "Website of up to five pages",
       "Facebook and Instagram page creation",
       "Brand identity with logo and colour palette",
       "One-month content plan with calendar and captions",
-      "Post-launch domain and maintenance plan",
+      "Post-launch maintenance at 10% per month, every month",
     ],
   },
   {
@@ -41,14 +41,14 @@ const plans = [
     description: "A more capable customer experience with hands-on support.",
     features: [
       "50% upfront project deposit",
-      "Monthly development payments for the remaining balance",
+      "Remaining project balance paid on completion",
       "Everything in Standard",
       "Customer dashboard for bookings or enquiries",
       "AI assistant setup",
       "Client onboarding documents",
       "Dedicated project manager",
       "Google Workspace setup for Drive, Gmail and Meet",
-      "Post-launch domain and maintenance plan",
+      "Post-launch maintenance at 10% per month, every month",
     ],
   },
 ];
@@ -95,7 +95,7 @@ export default function PricingPage() {
     <main className="pricing-page">
       <header className="site-header">
         <a className="wordmark" href="/" aria-label="Zero Index home"><img className="brand-mark" src="/zero-index-mark.png" alt="" /><span>ZERO INDEX</span></a>
-        <nav aria-label="Primary navigation"><a href="/#problems">What we solve</a><a href="/#solutions">Solutions</a><a href="/#approach">How we work</a><a href="/pricing">Pricing</a></nav>
+        <nav aria-label="Primary navigation"><a href="/#problems">What we solve</a><a href="/#solutions">Solutions</a><a href="/#approach">How we work</a></nav>
         <button className="nav-cta" type="button" onClick={() => openLeadForm()}>Start a project <Arrow /></button>
       </header>
 
@@ -110,13 +110,13 @@ export default function PricingPage() {
 
       <section className="pricing-plans">
         <div className="section-label">WEBSITE PACKAGES / 02</div>
-        <div className="pricing-intro"><h2>Clear work.<br />Clear cost.</h2><p>The monthly figure covers the remaining development balance while your site is being built. Every project starts with a 50% deposit.</p></div>
+        <div className="pricing-intro"><h2>Clear work.<br />Clear cost.</h2><p>The package figure is a once-off website build cost. Every project starts with a 50% deposit, with post-launch maintenance charged at 10% per month, every month.</p></div>
         <div className="plan-grid">
           {plans.map((plan) => (
             <article className={`pricing-plan${plan.featured ? " featured" : ""}`} key={plan.name}>
               <div className="plan-topline"><span>{plan.featured ? "RECOMMENDED" : "WEBSITE PACKAGE"}</span><span>{plan.featured ? "02" : plan.name === "Basic" ? "01" : "03"}</span></div>
               <h2>{plan.name}</h2>
-              <p className="plan-price">{plan.price}<small> / month</small></p>
+              <p className="plan-price">{plan.price}<small> once-off</small></p>
               <p className="plan-description">{plan.description}</p>
               <ul>{plan.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
               <button className={`plan-button${plan.featured ? " plan-button-featured" : ""}`} type="button" onClick={() => openLeadForm(plan.name)}>Choose {plan.name} <Arrow /></button>
@@ -130,8 +130,8 @@ export default function PricingPage() {
         <div className="pricing-model-intro"><h2>Simple from<br />first payment to care.</h2><p>The aim is to make launch manageable, then keep the essential work of looking after your site covered.</p></div>
         <div className="payment-steps">
           <article><span>01</span><h3>Start with 50% upfront</h3><p>Your deposit reserves development time and covers planning, setup and onboarding.</p></article>
-          <article><span>02</span><h3>Pay monthly during development</h3><p>The outstanding project balance is split into monthly payments while the work is in progress.</p></article>
-          <article><span>03</span><h3>Continue with post-launch care</h3><p>After launch, a monthly care plan covers domains, maintenance, updates, backups and support.</p></article>
+          <article><span>02</span><h3>Pay the balance on completion</h3><p>The remaining project balance is due when the agreed website build is complete and ready to launch.</p></article>
+          <article><span>03</span><h3>Continue with post-launch care</h3><p>After launch, maintenance is charged at 10% of the build cost per month, every month, covering domains, updates, backups and support.</p></article>
         </div>
       </section>
 

@@ -46,7 +46,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Zero Index home"><img className="brand-mark" src="/zero-index-mark.png" alt="" /><span>ZERO INDEX</span></a>
-        <nav aria-label="Primary navigation"><a href="#problems">What we solve</a><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a><a href="/pricing">Pricing</a></nav>
+        <nav aria-label="Primary navigation"><a href="#problems">What we solve</a><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a></nav>
         <button className="nav-cta" type="button" onClick={openLeadForm}>Book a review <Arrow /></button>
       </header>
 
