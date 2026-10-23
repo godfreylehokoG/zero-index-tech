@@ -5,6 +5,22 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Zero Index",
+  alternateName: ["Zero Index Consulting", "Zero Index Technologies"],
+  url: "https://zeroindex.co.za",
+  logo: "https://zeroindex.co.za/zero-index-mark.png",
+  email: "hello@zeroindex.co.za",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Johannesburg",
+    addressCountry: "ZA",
+  },
+  sameAs: ["https://www.linkedin.com/company/zero-index-technologies/"],
+};
+
 export const metadata: Metadata = {
   title: "Zero Index Consulting",
   description: "AI-assisted enquiry, workflow, data and cloud systems for growing service businesses.",
@@ -27,6 +43,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
       </body>
     </html>
