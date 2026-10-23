@@ -24,6 +24,9 @@ const organizationJsonLd = {
 export const metadata: Metadata = {
   title: "Zero Index Consulting",
   description: "AI-assisted enquiry, workflow, data and cloud systems for growing service businesses.",
+  verification: {
+    google: "q4xwTScJbMk5-9CVcq0Dc79vStU0Mc3SV3g1bgtqSRc",
+  },
   other: {
     "codex-preview": "development",
   },
