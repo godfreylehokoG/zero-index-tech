@@ -102,7 +102,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand"><img className="footer-mark" src="/zero-index-mark-dark.png" alt="" /><strong>ZERO INDEX</strong><p>Operations, automation<br />and data systems.</p></div>
-        <div><span className="footer-label">CONTACT</span><a href="mailto:hello@zeroindex.co.za">hello@zeroindex.co.za</a><span>Johannesburg, South Africa</span></div>
+        <div><span className="footer-label">CONTACT</span><a href="mailto:hello@zeroindex.co.za">hello@zeroindex.co.za</a><span>Johannesburg, South Africa</span><a href="https://www.linkedin.com/company/zero-index-technologies/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
         <div><span className="footer-label">NAVIGATE</span><a href="#solutions">Solutions</a><a href="#results">Client results</a><a href="#approach">How we work</a><a href="/pricing">Pricing</a></div>
         <div><span className="footer-label">LEGAL</span><a href="https://zeroindex.co.za/legal/privacy">Privacy</a><a href="https://zeroindex.co.za/legal/terms">Terms</a><span>© 2026 Zero Index</span></div>
       </footer>
